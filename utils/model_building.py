@@ -11,6 +11,7 @@ from tensorflow.keras.utils import plot_model
 from tensorflow.keras.losses import MeanSquaredError, Reduction
 from tensorflow.data import Dataset
 from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.activations import leaky_relu
 
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, make_scorer, classification_report
 from sklearn.model_selection import GridSearchCV
@@ -39,24 +40,24 @@ def build_autoencoder(input_dim, latent_dim):
     return Input(shape=(input_dim,), name='Input Layer')
 
   def encoder_layers(input_tensor):
-    x = Dense(256, activation='relu', name = 'encoder_1')(input_tensor)
-    x = Dense(128, activation='relu', name = 'encoder_2')(x)
-    x = Dense(64, activation='relu', name = 'encoder_3')(x)
-    x = Dense(32, activation='relu', name ='encoder_4')(x)
-    x = Dense(16, activation='relu', name ='encoder_5')(x)
-    x = Dense(8, activation='relu', name ='encoder_6')(x)
-    x = Dense(4, activation='relu', name ='encoder_7')(x)
+    x = Dense(256, activation='relu', name = 'encoder_1', activation=leaky_relu)(input_tensor)
+    x = Dense(128, activation='relu', name = 'encoder_2', activation=leaky_relu)(x)
+    x = Dense(64, activation='relu', name = 'encoder_3', activation=leaky_relu)(x)
+    x = Dense(32, activation='relu', name ='encoder_4', activation=leaky_relu)(x)
+    x = Dense(16, activation='relu', name ='encoder_5', activation=leaky_relu)(x)
+    x = Dense(8, activation='relu', name ='encoder_6', activation=leaky_relu)(x)
+    x = Dense(4, activation='relu', name ='encoder_7', activation=leaky_relu)(x)
     latent_space = Dense(latent_dim, activation='relu', name='Latent_Space')(x)
     return latent_space
 
   def decoder_layers(latent_tensor):
-    x = Dense(4, activation='relu', name ='decoder_1')(latent_tensor)
-    x = Dense(8, activation='relu', name ='decoder_2')(x)
-    x = Dense(16, activation='relu', name ='decoder_3')(x)
-    x = Dense(32, activation='relu', name ='decoder_4')(x)
-    x = Dense(64, activation='relu', name ='decoder_5')(x)
-    x = Dense(128, activation='relu', name = 'decoder_6')(x)
-    x = Dense(256, activation='relu', name = 'decoder_7')(x)
+    x = Dense(4, activation='relu', name ='decoder_1', activation=leaky_relu)(latent_tensor)
+    x = Dense(8, activation='relu', name ='decoder_2', activation=leaky_relu)(x)
+    x = Dense(16, activation='relu', name ='decoder_3', activation=leaky_relu)(x)
+    x = Dense(32, activation='relu', name ='decoder_4', activation=leaky_relu)(x)
+    x = Dense(64, activation='relu', name ='decoder_5', activation=leaky_relu)(x)
+    x = Dense(128, activation='relu', name = 'decoder_6', activation=leaky_relu)(x)
+    x = Dense(256, activation='relu', name = 'decoder_7', activation=leaky_relu)(x)
     output_reconstruction = Dense(input_dim, activation='sigmoid', name='Reconstruction_Output')(x)
     return output_reconstruction
 
