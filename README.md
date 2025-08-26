@@ -9,3 +9,10 @@
 This project aims to develop and introduce a novel anomaly detection procedure on accounting journal entry data by combining autoencoder and Benford's first digit analysis.
 
 This project is greatly inspired by the [work](https://github.com/GitiHubi/deepAI) of Marco Schreyer and Timur Sattarov.
+
+## Approach Overview
+### Baseline Implementation
+![Baseline Implementation](images/Skripsi_Viz_1.png)
+
+### Proposed Method
+![Proposed Method](images/Skripsi_Viz_2.png)
