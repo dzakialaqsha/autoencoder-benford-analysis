@@ -126,6 +126,7 @@ def heaviside_step_function(data, reconstruction_error_list, threshold):
   if threshold <= 0:
     raise ValueError("Error. Provided threshold argument is not a positive float")
 
+  data = data.copy()
   data['reconstruction_error'] = reconstruction_error_list
   data['predicted_label'] = (reconstruction_error_list > threshold).astype(int)
   return data
