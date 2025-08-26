@@ -119,6 +119,19 @@ def test_benford(dataset, first_digit_column):
 
 def classwise_benford(dataset, first_digit_column, target_column):
     '''
+    Analyzes the conformity of first digits to Benford's Law for each unique category in a specified column.
+
+    This function iterates through each unique value in the `target_column` and applies a Benford's Law
+    test to the corresponding subset of the dataset. It then prints the Mean Absolute Deviation (MAD)
+    score and a descriptive conformity category for each group.
+
+    Args:
+        dataset (pd.DataFrame): The full dataset to be analyzed.
+        first_digit_column (str): The name of the numerical column whose first digits will be analyzed.
+        target_column (str): The name of the categorical column used to group the analysis.
+
+    Returns:
+        None: This function prints the results directly and does not return any value.
     '''
     if not isinstance(dataset, pd.DataFrame):
       raise ValueError("Error. The 'data' argument must be a pandas DataFrame.")
