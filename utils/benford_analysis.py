@@ -150,4 +150,4 @@ def classwise_benford(dataset, first_digit_column, target_column):
         type = 'Acceptable Deviation'
       else:
         type = 'Significant Deviation'
-      print(f'GL Account Number : {cat} | Mean absolute Deviation : {mad:.4f} | type = {type}')
+      print(f'{target_column} : {cat} | Mean absolute Deviation : {mad:.4f} | type = {type}')
