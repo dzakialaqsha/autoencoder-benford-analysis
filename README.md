@@ -19,3 +19,8 @@ This project is greatly inspired by the [work](https://github.com/GitiHubi/deepA
 
 ### Proposed Combined Method
 ![Proposed Method](images/Skripsi_Viz_3.png)
+
+## Result Overview (Not Finished)
+| Anomaly Detection Method | Sub-Sample Method | Sub-Sample Size | Accuracy |
+| ------------------------ | ----------------- | --------------- | ----------- |
+| Autoencoder              | Distribution Preserving Stratified Random Sampling | 100042 entries | 99.95% |
