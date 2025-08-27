@@ -21,8 +21,9 @@ This project is greatly inspired by the [work](https://github.com/GitiHubi/deepA
 ### Proposed Combined Method
 ![Proposed Method](images/Skripsi_Viz_3.png)
 
-## Result Overview (Not Finished)
+## Result Overview
 | Anomaly Detection Method | Sub-Sample Method | Sub-Sample Size | Accuracy | Precision | Recall | F1-Score |
 | ------------------------ | ----------------- | --------------- | ----------- | ----------- | ----------- | ----------- |
 | Autoencoder | Distribution Preserving Stratified Random Sampling | 100,042 entries | 99.96% | 93.33% | 80.46% | 86.42% |
 | Benford's Analysis | Full Data | 533,009 entries | 99.99% | 100% | 70% | 82.35% |
+| Combined Approach | Distribution Preserving Stratified Random Sampling | 100,042 entries | 99.96% | 92.72% | 80.46% | 86.15% |
