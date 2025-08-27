@@ -11,8 +11,11 @@ This project was developed as part of an **undergraduate thesis (skripsi)** to f
 This project is greatly inspired by the [work](https://github.com/GitiHubi/deepAI) of Marco Schreyer and Timur Sattarov, as well as the works of Mark Nigrini.
 
 ## Approach Overview
-### Baseline Implementation
+### Baseline Autoencoder Implementation
 ![Baseline Implementation](images/Skripsi_Viz_1.png)
 
-### Proposed Method
+### Baseline Benford's First Digit Analysis for Anomaly Detection
+![Baseline Implementation](images/Skripsi_Viz_2.png)
+
+### Proposed Combined Method
 ![Proposed Method](images/Skripsi_Viz_3.png)
