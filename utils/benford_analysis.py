@@ -164,3 +164,53 @@ def classwise_benford(dataset, first_digit_column, target_column):
       else:
         type = 'Significant Deviation'
       print(f'{target_column} : {cat} | Mean absolute Deviation : {mad:.4f} | type = {type}')
+
+def classwise_benford_table(dataset, first_digit_column, target_column):
+    '''
+    Analyzes the conformity of first digits to Benford's Law for each unique category in a specified column.
+
+    This function iterates through each unique value in the `target_column` and applies a Benford's Law
+    test to the corresponding subset of the dataset. It then prints the Mean Absolute Deviation (MAD)
+    score and a descriptive conformity category for each group.
+
+    Args:
+        dataset (pd.DataFrame): The full dataset to be analyzed.
+        first_digit_column (str): The name of the numerical column whose first digits will be analyzed.
+        target_column (str): The name of the categorical column used to group the analysis.
+
+    Returns:
+        dataset (pd.DataFrame): The dataset with added 'benford_conformity' and 'benford_mad' columns.
+    '''
+    if not isinstance(dataset, pd.DataFrame):
+      raise ValueError("Error. The 'data' argument must be a pandas DataFrame.")
+
+    if not isinstance(first_digit_column, str):
+      raise ValueError("Error. The 'first_digit_column' argument must be a string.")
+
+    if not isinstance(target_column, str):
+      raise ValueError("Error. The 'target_column' argument must be a string.")
+
+    if first_digit_column not in dataset.columns:
+      raise ValueError(f"Error. Column {first_digit_column} doesn't exist in the provided dataset.")
+
+    if target_column not in dataset.columns:
+      raise ValueError(f"Error. Column {target_column} doesn't exist in the provided DataFrame.")
+
+    if not pd.api.types.is_numeric_dtype(dataset[first_digit_column].dtype):
+      raise ValueError(f"Error. The 'first_digit_column: {first_digit_column}' argument must be a numeric column in the provided DataFrame.")
+
+    dataset = dataset.copy()
+
+    dataset["benford_conformity"] = ""
+    dataset["benford_mad"] = 0.0
+
+    for cat in dataset[target_column].unique().tolist():
+        mask = (dataset[target_column] == cat)
+        mad, conformity = test_benford(dataset[mask].copy(), first_digit_column)
+
+        # Assign conformity and MAD to the filtered rows using .loc
+        dataset.loc[mask, "benford_conformity"] = conformity
+        dataset.loc[mask, "benford_mad"] = mad
+
+
+    return dataset
