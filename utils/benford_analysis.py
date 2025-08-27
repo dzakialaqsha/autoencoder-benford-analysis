@@ -165,7 +165,7 @@ def classwise_benford(dataset, first_digit_column, target_column):
         type = 'Significant Deviation'
       print(f'{target_column} : {cat} | Mean absolute Deviation : {mad:.4f} | type = {type}')
 
-def classwise_benford_table(dataset, first_digit_column, target_column):
+def benford_anomaly_detection(dataset, first_digit_column, target_column):
     '''
     Analyzes the conformity of first digits to Benford's Law for each unique category in a specified column.
 
@@ -211,6 +211,7 @@ def classwise_benford_table(dataset, first_digit_column, target_column):
         # Assign conformity and MAD to the filtered rows using .loc
         dataset.loc[mask, "benford_conformity"] = conformity
         dataset.loc[mask, "benford_mad"] = mad
-
+        
+    dataset['benford_label'] = dataset['benford_conformity'].isin(['Significant Deviation', 'Acceptable Deviation']).astype(int)
 
     return dataset
