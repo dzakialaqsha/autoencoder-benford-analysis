@@ -15,4 +15,4 @@ This project is greatly inspired by the [work](https://github.com/GitiHubi/deepA
 ![Baseline Implementation](images/Skripsi_Viz_1.png)
 
 ### Proposed Method
-![Proposed Method](images/Skripsi_Viz_2.png)
+![Proposed Method](images/Skripsi_Viz_3.png)
