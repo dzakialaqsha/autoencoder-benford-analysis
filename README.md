@@ -23,4 +23,4 @@ This project is greatly inspired by the [work](https://github.com/GitiHubi/deepA
 ## Result Overview (Not Finished)
 | Anomaly Detection Method | Sub-Sample Method | Sub-Sample Size | Accuracy | Precision | Recall | F1-Score |
 | ------------------------ | ----------------- | --------------- | ----------- | ----------- | ----------- | ----------- |
-| Autoencoder              | Distribution Preserving Stratified Random Sampling | 100042 entries | 99.95% | 93.33% | 80.45% |
+| Autoencoder              | Distribution Preserving Stratified Random Sampling | 100042 entries | 99.96% | 93.33% | 80.46% | 86.42% |
