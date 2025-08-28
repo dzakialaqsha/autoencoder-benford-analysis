@@ -7,7 +7,11 @@
 |                | Adi Firman Ramadhan, S.E., M.Ak. | Universitas Diponegoro             | Accounting | Second Author, Supervisor |
 
 ## Project Overview
-Currently a work-in-progress, this project aims to introduce a novel approach for accounting journal entry red flag test by combining autoencoder neural network and Benford's law first digit analysis on a data of 500,000+ transactions from a pseudonymized real life entity's SAP system's BKPF and BSEG table. Achieved 99% accuracy, 92% precision, 80% recall, and 86% F1-Score. The novel approach introduces a new heuristical multiplier mechanism on autoencoder reconstruction error to elevate below-threshold observations satisfying multiperspective criteria based on adjacency and Benford's law conformity in order to increase recall from baseline autoencoder method. As well as introducing a new Benford's law distribution preserving stratified sampling method. This project is conducted as part of a graduation final year thesis project for a bachelor's degree in accounting. This project is greatly inspired by the [works](https://github.com/GitiHubi/deepAI) of Marco Schreyer, et al. in autoencoder implementation for accounting as well as Mark Nigrini's works on Benford's digit analysis in accounting.
+Currently a work-in-progress, this project aims to introduce a novel approach for accounting journal entry red flag test by combining autoencoder neural network and Benford's law first digit analysis on a data of 500,000+ transactions from a pseudonymized real life entity's SAP system's BKPF and BSEG table. 
+
+Achieved 99% accuracy, 92% precision, 80% recall, and 86% F1-Score. 
+
+The novel approach introduces a new heuristical multiplier mechanism on autoencoder reconstruction error to elevate below-threshold observations satisfying multiperspective criteria based on adjacency and Benford's law conformity in order to increase recall from baseline autoencoder method. As well as introducing a new Benford's law distribution preserving stratified sampling method. This project is conducted as part of a graduation final year thesis project for a bachelor's degree in accounting. This project is greatly inspired by the [works](https://github.com/GitiHubi/deepAI) of Marco Schreyer, et al. in autoencoder implementation for accounting as well as Mark Nigrini's works on Benford's digit analysis in accounting.
 
 ## Approach Overview
 ### Baseline Autoencoder Implementation
