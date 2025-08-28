@@ -92,7 +92,7 @@ def train_autoencoder(model, train_data, epochs, batch_size, learning_rate):
   optimizer = Adam(learning_rate=learning_rate)
   model.compile(optimizer=optimizer, loss='mean_squared_error')
 
-  history = model.fit(train_data, train_data, epochs=15, batch_size=32)
+  history = model.fit(train_data, train_data, epochs=epochs, batch_size=32)
   reconstructions = model.predict(train_data)
 
   mse_loss_fn = MeanSquaredError(reduction=Reduction.NONE)
