@@ -31,7 +31,7 @@ The novel approach introduces a new heuristical multiplier mechanism on autoenco
 2. Stage 2: Latent Space Representation (with original anomaly labeling)
 3. Stage 3: Reconstructed Representation (Output Layer with original anomaly labeling)
 4. Stage 4: Univariate Reconstruction Error MSE Span (with original anomaly labeling)
-5. Stage 5: Univariate Reconstruction Error MSE Span (with predicted anomaly labeling for observations with MSE value larger than a chosen n percentile)
+5. Stage 5: Univariate Reconstruction Error MSE Span (with predicted anomaly labeling, flags for observations with MSE value larger than a chosen n percentile)
 6. Stage 6: Original Representation with predicted anomaly labeling
 
 ## Result Overview
