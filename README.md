@@ -25,7 +25,7 @@ The novel approach introduces a new heuristical multiplier mechanism on autoenco
 
 ### Autoencoder Visualization Using Synthetic Data
 ![Autoencoder Visualization](images/autoencoder_viz_full.gif)
-## Stages Explanation
+#### Stages Explanation
 
 1. Stage 1: Original Representation (Input Layer with original anomaly labeling)
 2. Stage 2: Latent Space Representation (with original anomaly labeling)
