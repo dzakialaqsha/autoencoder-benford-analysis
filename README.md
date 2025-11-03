@@ -23,6 +23,9 @@ The novel approach introduces a new heuristical multiplier mechanism on autoenco
 ### Proposed Combined Method
 ![Proposed Method](images/Skripsi_Viz_3.png)
 
+### Autoencoder Visualization
+![Autoencoder Visualization](images/autoencoder_viz_full.gif)
+
 ## Result Overview
 | Anomaly Detection Method | Sub-Sample Method | Sub-Sample Size | Accuracy | Precision | Recall | F1-Score |
 | ------------------------ | ----------------- | --------------- | ----------- | ----------- | ----------- | ----------- |
