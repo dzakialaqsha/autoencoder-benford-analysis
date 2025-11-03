@@ -25,6 +25,14 @@ The novel approach introduces a new heuristical multiplier mechanism on autoenco
 
 ### Autoencoder Visualization Using Synthetic Data
 ![Autoencoder Visualization](images/autoencoder_viz_full.gif)
+## Stages Explanation
+
+1. Stage 1: Original Representation (Input Layer with original anomaly labeling)
+2. Stage 2: Latent Space Representation (with original anomaly labeling)
+3. Stage 3: Reconstructed Representation (Output Layer with original anomaly labeling)
+4. Stage 4: Univariate Reconstruction Error MSE Span (with original anomaly labeling)
+5. Stage 5: Univariate Reconstruction Error MSE Span (with predicted anomaly labeling for observations with MSE value larger than a chosen n percentile)
+6. Stage 6: Original Representation with predicted anomaly labeling
 
 ## Result Overview
 | Anomaly Detection Method | Sub-Sample Method | Sub-Sample Size | Accuracy | Precision | Recall | F1-Score |
