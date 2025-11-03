@@ -5,9 +5,9 @@ library(tidyverse)
 
 # Visualisasi Autoencoder
 path <- c(
-  'input_data.csv',
-  'latent_data.csv',
-  'csv'
+  '/input_data.csv',
+  '/latent_data.csv',
+  '/reconstructed_data.csv'
 )
 
 list_data <- list()
@@ -163,3 +163,4 @@ animate(
   end_pause = end_pause_frames,
   duration = 30
 )
+
